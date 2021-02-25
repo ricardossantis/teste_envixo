@@ -24,9 +24,58 @@
         </header>
         <div id="formContainer">
           <div id="formType">
-            <span id="first">Cadastro</span>
-            <span id="last">Login</span>
+            <span id="register">Cadastro</span>
+            <span id="login">Login</span>
             <div id="dinamicBorder"></div>
+          </div>
+          <div id="formRegister">
+            <form>
+              <input
+                type="text"
+                placeholder="Nome da Escola"
+                class="input"
+                name=""
+              />
+              <input
+                type="email"
+                placeholder="Seu email"
+                class="input"
+                name=""
+              />
+              <input
+                type="password"
+                placeholder="Crie uma senha"
+                class="input"
+                name=""
+              />
+              <select class="select">
+                <option>+55</option>
+                <img id="arrow" src="./assets/img/icon-chevron-down.svg" />
+                <input
+                  type="text"
+                  placeholder="00 0000-0000"
+                  class="inputNumber"
+                  name=""
+                />
+                <button id="buttonRegister">Cadastrar</button>
+              </select>
+            </form>
+          </div>
+          <div id="formLogin">
+            <input
+              type="email"
+              placeholder="E-mail"
+              class="inputLogin"
+              name=""
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              class="inputLogin"
+              name=""
+            />
+            <p id="paragraphLogin">Esqueci minha senha</p>
+            <button id="buttonLogin">Login</button>
           </div>
         </div>
         <footer id="footer">

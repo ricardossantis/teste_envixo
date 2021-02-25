@@ -1,29 +1,35 @@
 const animateFormTransition = () => {
-  let first = document.querySelector("#first");
-  let last = document.querySelector("#last");
+  let register = document.querySelector("#register");
+  let login = document.querySelector("#login");
   let border = document.querySelector("#dinamicBorder");
+  let formLogin = document.querySelector("#formLogin");
+  let formRegister = document.querySelector("#formRegister");
 
-  $(first).on("click", () => {
-    if ($(first).hasClass("changed")) {
-      $(first).removeClass("changed");
-      $(last).removeClass("changed");
+  $(register).on("click", () => {
+    if ($(register).hasClass("changed")) {
+      $(register).removeClass("changed");
+      $(login).removeClass("changed");
       $(border).removeClass("changed");
-    } else {
-      $(first).addClass("changed");
-      $(last).addClass("changed");
-      $(border).addClass("changed");
+      setTimeout(() => $(formLogin).css("display", "none"), 1500);
+      setTimeout(() => $(formRegister).css("display", "flex"), 1500);
+      $(formRegister).addClass("fade-in");
+      $(formRegister).removeClass("fade-out");
+      $(formLogin).addClass("fade-out");
+      $(formLogin).removeClass("fade-in");
     }
   });
 
-  $(last).on("click", () => {
-    if ($(last).hasClass("changed")) {
-      $(last).removeClass("changed");
-      $(first).removeClass("changed");
-      $(border).removeClass("changed");
-    } else {
-      $(last).addClass("changed");
-      $(first).addClass("changed");
+  $(login).on("click", () => {
+    if (!$(login).hasClass("changed")) {
+      $(login).addClass("changed");
+      $(register).addClass("changed");
       $(border).addClass("changed");
+      setTimeout(() => $(formRegister).css("display", "none"), 1500);
+      setTimeout(() => $(formLogin).css("display", "block"), 1500);
+      $(formRegister).addClass("fade-out");
+      $(formRegister).removeClass("fade-in");
+      $(formLogin).addClass("fade-in");
+      $(formLogin).removeClass("fade-out");
     }
   });
 };
