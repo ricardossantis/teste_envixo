@@ -17,7 +17,6 @@
 #leftContainer {
   width: 30%;
   height: 80%;
-  border: 1px solid black;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 10px #3333331f;
   border-radius: 30px;
@@ -34,7 +33,6 @@
 
 /* header */
 #header {
-  /* border: 1px solid black; */
   width: 85%;
   margin-top: 40px;
 }
@@ -56,10 +54,72 @@
 
 /* form */
 #formContainer {
-  border: 1px solid black;
-  width: 80%;
+  width: 85%;
   height: 400px;
   margin-top: 40px;
+}
+
+#formType {
+  width: 100%;
+  position: relative;
+}
+
+#first {
+  color: #333333;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: SFUIText;
+  position: absolute;
+  left: 0;
+  transition: left 2s;
+}
+
+#first.changed {
+  color: #c4c4c4;
+  font-size: 22px;
+  font-weight: normal;
+  font-family: SFUIText;
+  position: absolute;
+  left: 80%;
+}
+
+#last {
+  color: #c4c4c4;
+  font-size: 22px;
+  font-weight: normal;
+  font-family: SFUIText;
+  position: absolute;
+  left: 80%;
+  transition: left 2s;
+}
+#last.changed {
+  color: #333333;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: SFUIText;
+  position: absolute;
+  left: 0;
+}
+
+#dinamicBorder {
+  position: absolute;
+  left: 0;
+  width: 95px;
+  background-color: #1abc9c;
+  height: 3.5px;
+  border-radius: 50px;
+  top: 30px;
+  transition: width 2s;
+}
+
+#dinamicBorder.changed {
+  position: absolute;
+  left: 0;
+  width: 58px;
+  height: 3.5px;
+  border-radius: 50px;
+  background-color: #1abc9c;
+  top: 30px;
 }
 
 /* footer */
